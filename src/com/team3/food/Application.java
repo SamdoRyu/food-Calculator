@@ -12,12 +12,24 @@ public class Application {
         do {
             System.out.println("===== 팀 삼도류 식단 계산기 =====");
             System.out.println("1. 오늘 먹은 칼로리 합계");
+            System.out.println("2. 남은 칼로리");
             System.out.println("0. 종료");
             System.out.print("메뉴 선택 : ");
             menu = sc.nextInt();
 
             switch (menu) {
-                // (2) 각자 자기 case 블록 추가
+                case 2: {
+                    int goalk=0;
+                    int eatk=0;
+                    System.out.print("목표 칼로리: ");
+                    goalk=sc.nextInt();
+                    System.out.print("먹은 칼로리: ");
+                    eatk=sc.nextInt();
+                    MinusCalculator minus01 = new MinusCalculator();
+                    System.out.println(minus01.judge(goalk, eatk));
+                    break;
+                }
+
                 case 0:
                     System.out.println("계산기를 종료합니다.");
                     break;
