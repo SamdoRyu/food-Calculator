@@ -10,15 +10,44 @@ public class Application {
         int menu;
 
         do {
-            System.out.println("===== [팀 이름] 식단 계산기 =====");
-            // (1) 각자 자기 메뉴 한 줄 추가
+            System.out.println("===== 팀 삼도류 식단 계산기 =====");
+            System.out.println("1. 오늘 먹은 칼로리 합계");
+            System.out.println("2. 남은 칼로리");
             System.out.println("4. 더치페이 계산");
             System.out.println("0. 종료");
             System.out.print("메뉴 선택 : ");
             menu = sc.nextInt();
 
             switch (menu) {
-                // (2) 각자 자기 case 블록 추가
+                case 0:
+                    System.out.println("계산기를 종료합니다.");
+                    break;
+                case 1: {
+                    int breakfast_kcal = 0;
+                    int lunch_kcal = 0;
+                    int dinner_kcal = 0;
+                    PlusCalculator SumKcal = new PlusCalculator();
+
+                    System.out.print("아침 칼로리 : ");
+                    breakfast_kcal = sc.nextInt();
+                    System.out.print("점심 칼로리 : ");
+                    lunch_kcal = sc.nextInt();
+                    System.out.print("저녁 칼로리 : ");
+                    dinner_kcal = sc.nextInt();
+                    System.out.println("오늘 먹은 칼로리는 " + SumKcal.Pluskcal(breakfast_kcal, lunch_kcal, dinner_kcal) + " kcal 입니다.");
+                    break;
+                }
+                case 2: {
+                    int goalk=0;
+                    int eatk=0;
+                    System.out.print("목표 칼로리: ");
+                    goalk=sc.nextInt();
+                    System.out.print("먹은 칼로리: ");
+                    eatk=sc.nextInt();
+                    MinusCalculator minus01 = new MinusCalculator();
+                    System.out.println(minus01.judge(goalk, eatk));
+                    break;
+                }
                 case 4: {
                     System.out.print("음식값 : ");
                     int price = sc.nextInt();
@@ -43,9 +72,6 @@ public class Application {
                     }
                     break;
                 }
-                case 0:
-                    System.out.println("계산기를 종료합니다.");
-                    break;
                 default:
                     System.out.println("없는 메뉴입니다. 다시 선택하세요.");
             }
