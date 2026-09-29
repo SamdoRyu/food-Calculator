@@ -18,12 +18,23 @@ public class Application {
 
             switch (menu) {
                 // (2) 각자 자기 case 블록 추가
+                case 3: {
+                    System.out.print("1인분 칼로리 : ");
+                    int kcal = sc.nextInt();
+                    System.out.print("몇 인분까지 : ");
+                    int maxCount = sc.nextInt();
+
+                    MultiplyCalculator mc = new MultiplyCalculator();
+                    mc.printTable(kcal, maxCount);
+                    break;
+                }
                 case 0:
                     System.out.println("계산기를 종료합니다.");
                     break;
                 default:
                     System.out.println("없는 메뉴입니다. 다시 선택하세요.");
             }
+
             System.out.println();
 
         } while (menu != 0);
