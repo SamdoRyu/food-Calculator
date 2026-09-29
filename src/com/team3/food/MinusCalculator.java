@@ -1,3 +1,4 @@
+package com.team3.food;
 public class MinusCalculator {
     public String judge(int goalk, int eatk) {
         int result = minus(goalk, eatk);
@@ -11,7 +12,7 @@ public class MinusCalculator {
     }
 
     public int minus(int goalk, int eatk) {
-        return goalk-eatk;
+        return (goalk-eatk);
 
     }
 

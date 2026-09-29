@@ -18,11 +18,11 @@ public class Application {
 
             switch (menu) {
                 case 2: {
-                    int goalk, eatk;
+                    int goalk=0;
+                    int eatk=0;
                     System.out.print("목표 칼로리: ");
                     goalk=sc.nextInt();
-                    System.out.println();
-                    System.out.println("먹은 칼로리: ");
+                    System.out.print("먹은 칼로리: ");
                     eatk=sc.nextInt();
                     MinusCalculator minus01 = new MinusCalculator();
                     System.out.println(minus01.judge(goalk, eatk));
