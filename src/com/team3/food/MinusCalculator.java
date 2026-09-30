@@ -1,5 +1,6 @@
 package com.team3.food;
 public class MinusCalculator {
+    //판단 메소드(빼기 메소드의 결과를 받아서 판단한다)
     public String judge(int goalk, int eatk) {
         int result = minus(goalk, eatk);
         if (result>=0) {
@@ -11,6 +12,7 @@ public class MinusCalculator {
 
     }
 
+    //빼기 메소드(목표 칼로리 - 먹은 칼로리)
     public int minus(int goalk, int eatk) {
         return (goalk-eatk);
 
