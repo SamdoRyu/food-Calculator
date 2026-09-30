@@ -3,8 +3,10 @@ public class MinusCalculator {
     //판단 메소드(빼기 메소드의 결과를 받아서 판단한다)
     public String judge(int goalk, int eatk) {
         int result = minus(goalk, eatk);
-        if (result>=0) {
+        if (result>0) {
             return result + "kcal 더 먹을 수 있습니다.";
+        } else if (result==0) {
+            return "목표 칼로리 미설정 및 식단 미기록 상태입니다.";
         } else {
             return Math.abs(result) + "kcal 초과했습니다.";
         }
