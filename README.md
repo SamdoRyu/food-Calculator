@@ -13,7 +13,10 @@
 
 ## 실행 화면
 
-(스크린샷)
+<img width="572" height="1026" alt="image" src="https://github.com/user-attachments/assets/d44cb286-6d56-4f80-87b4-707c7ac850a8" />
+<img width="566" height="1090" alt="image" src="https://github.com/user-attachments/assets/4f550b76-07f3-4161-8df7-a5027a5d2371" />
+<img width="610" height="890" alt="image" src="https://github.com/user-attachments/assets/e63b1b74-5a0a-4d8e-b65a-034aac3d2eae" />
+
 
 ## 충돌 해결 기록
 
