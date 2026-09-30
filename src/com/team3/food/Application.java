@@ -29,13 +29,25 @@ public class Application {
                     int dinner_kcal = 0;
                     PlusCalculator SumKcal = new PlusCalculator();
 
-                    System.out.print("아침 칼로리 : ");
-                    breakfast_kcal = sc.nextInt();
-                    System.out.print("점심 칼로리 : ");
-                    lunch_kcal = sc.nextInt();
-                    System.out.print("저녁 칼로리 : ");
-                    dinner_kcal = sc.nextInt();
-                    System.out.println("오늘 먹은 칼로리는 " + SumKcal.Pluskcal(breakfast_kcal, lunch_kcal, dinner_kcal) + " kcal 입니다.");
+                    while(true) {
+                        System.out.print("아침 칼로리 : ");
+                        breakfast_kcal = sc.nextInt();
+                        if(breakfast_kcal < 0) {
+                            System.out.println("음수는 입력할 수 없습니다. 다시 입력하세요.");
+                            break;}
+                        System.out.print("점심 칼로리 : ");
+                        lunch_kcal = sc.nextInt();
+                        if(lunch_kcal < 0) {
+                            System.out.println("음수는 입력할 수 없습니다. 다시 입력하세요.");
+                            break;}
+                        System.out.print("저녁 칼로리 : ");
+                        dinner_kcal = sc.nextInt();
+                        if(dinner_kcal < 0) {
+                            System.out.println("음수는 입력할 수 없습니다. 다시 입력하세요.");
+                            break;}
+                        System.out.println("오늘 먹은 칼로리는 " + SumKcal.Pluskcal(breakfast_kcal, lunch_kcal, dinner_kcal) + " kcal 입니다.");
+                        break;
+                    }
                     break;
                 }
                 case 2: {
