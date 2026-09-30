@@ -40,13 +40,23 @@ public class Application {
                 }
                 case 2: {
                     int goalk=0;
+                    while (true) {
+                        System.out.print("목표 칼로리: ");
+                        goalk=sc.nextInt();
+                        if (goalk >= 0) break;
+                        System.out.println("음수는 입력할 수 없습니다. 다시 입력하세요.");
+                    }
+
                     int eatk=0;
-                    System.out.print("목표 칼로리: ");
-                    goalk=sc.nextInt();
-                    System.out.print("먹은 칼로리: ");
-                    eatk=sc.nextInt();
+                    while (true) {
+                        System.out.print("먹은 칼로리: ");
+                        eatk = sc.nextInt();
+                        if (eatk >= 0) break;
+                        System.out.println("음수는 입력할 수 없습니다. 다시 입력하세요.");
+                    }
                     MinusCalculator minus01 = new MinusCalculator();
                     System.out.println(minus01.judge(goalk, eatk));
+
                     break;
                 }
                 case 3: {
