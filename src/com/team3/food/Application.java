@@ -13,6 +13,7 @@ public class Application {
             System.out.println("===== 팀 삼도류 식단 계산기 =====");
             System.out.println("1. 오늘 먹은 칼로리 합계");
             System.out.println("2. 남은 칼로리");
+            System.out.println("3. n인분 칼로리 표");
             System.out.println("4. 더치페이 계산");
             System.out.println("0. 종료");
             System.out.print("메뉴 선택 : ");
@@ -48,6 +49,16 @@ public class Application {
                     System.out.println(minus01.judge(goalk, eatk));
                     break;
                 }
+                case 3: {
+                    System.out.print("1인분 칼로리 : ");
+                    int kcal = sc.nextInt();
+                    System.out.print("몇 인분까지 : ");
+                    int maxCount = sc.nextInt();
+
+                    MultiplyCalculator mc = new MultiplyCalculator();
+                    mc.printTable(kcal, maxCount);
+                    break;
+                }
                 case 4: {
                     System.out.print("음식값 : ");
                     int price = sc.nextInt();
@@ -75,6 +86,7 @@ public class Application {
                 default:
                     System.out.println("없는 메뉴입니다. 다시 선택하세요.");
             }
+
             System.out.println();
 
         } while (menu != 0);
