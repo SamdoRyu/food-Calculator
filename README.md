@@ -1,0 +1,26 @@
+# 팀 삼도류 식단 계산기 (3팀)
+
+혼자 밥 해 먹는 사람을 위한 계산기입니다. 하루 칼로리를 관리하고, 재료를 n인분으로 환산하고, 배달비를 나눕니다.
+
+## 팀원과 담당 기능
+
+| 메뉴 | 기능                 | 담당          | 클래스             | 메소드 이름   | Issue | PR  |
+|------|----------------------|---------------|--------------------|---------------|-------|-----|
+| 1    | 오늘 먹은 칼로리 합계 | 원병찬 (팀장) | PlusCalculator     | Pluskcal(int breakfast, int lunch, int dinner) | #2    | #6  |
+| 2    | 남은 칼로리          | 정주희        | MinusCalculator    | minus(int goalk, int eatk), judge(int goalk, int eatk) | #4    | #7  |
+| 3    | n인분 칼로리 표      | 양다연        | MultiplyCalculator | multiply(int kcal, int count), printTable(int kcal, int maxCount) | #3    | #8  |
+| 4    | 배달 더치페이        | 우석민        | DivideCalculator   | divide(int price, int people), divideWithDelivery(int price, int deliveryFee, int people) | #1    | #5  |
+
+## 실행 화면
+
+(스크린샷)
+
+## 충돌 해결 기록
+
+- PR #5 : 메뉴 1, 2번과 4번 줄이 충돌. 세 줄 모두 남기고 번호순 정렬.
+- PR #7 : 메뉴 1번과 2번 줄이 충돌. 두 줄 모두 남기고 번호순 정렬.
+- PR #8 : 메뉴 1, 2, 4번과 3번 줄이 충돌. 네 줄 모두 남기고 번호순 정렬.
+
+## 협업하며 배운 점
+
+- 
