@@ -60,18 +60,34 @@ public class Application {
                     break;
                 }
                 case 4: {
-                    System.out.print("음식값 : ");
-                    int price = sc.nextInt();
-                    System.out.print("인원 수 : ");
-                    int people = sc.nextInt();
+                    int price;
+                    while (true) {
+                        System.out.print("음식값 : ");
+                        price = sc.nextInt();
+                        if (price > 0) break;
+                        System.out.println("음식값은 0보다 커야 합니다. 다시 입력하세요.");
+                    }
+
+                    int people;
+                    while (true) {
+                        System.out.print("인원 수 : ");
+                        people = sc.nextInt();
+                        if (people >= 0) break;
+                        System.out.println("음수는 입력할 수 없습니다. 다시 입력하세요.");
+                    }
 
                     if (people == 0) {
                         System.out.println("인원은 1명 이상이어야 합니다.");
                         break;
                     }
 
-                    System.out.print("배달비 (없으면 0) : ");
-                    int deliveryFee = sc.nextInt();
+                    int deliveryFee;
+                    while (true) {
+                        System.out.print("배달비 (없으면 0) : ");
+                        deliveryFee = sc.nextInt();
+                        if (deliveryFee >= 0) break;
+                        System.out.println("음수는 입력할 수 없습니다. 다시 입력하세요.");
+                    }
 
                     DivideCalculator divideCalculator = new DivideCalculator();
                     if (deliveryFee == 0) {
