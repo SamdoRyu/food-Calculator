@@ -50,14 +50,26 @@ public class Application {
                     break;
                 }
                 case 3: {
-                    System.out.print("1인분 칼로리 : ");
-                    int kcal = sc.nextInt();
-                    System.out.print("몇 인분까지 : ");
-                    int maxCount = sc.nextInt();
+                    int kcal;
+                    while (true) {
+                        System.out.print("1인분 칼로리: ");
+                        kcal = sc.nextInt();
+                        if (kcal >= 0) break;
+                        System.out.println("음수는 입력할 수 없습니다. 다시 입력하세요.");
+                    }
+                    int maxCount;
+                    while (true) {
+                        System.out.print("몇 인분까지 : ");
+                        maxCount = sc.nextInt();
+                        if (maxCount >= 0) break;
+                        System.out.println("음수는 입력할 수 없습니다. 다시 입력하세요.");
+                    }
+
 
                     MultiplyCalculator mc = new MultiplyCalculator();
                     mc.printTable(kcal, maxCount);
                     break;
+
                 }
                 case 4: {
                     System.out.print("음식값 : ");
